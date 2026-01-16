@@ -105,18 +105,56 @@ WHERE sls_order_dt > sls_ship_dt
 -- Expectations : No Results
 SELECT DISTINCT
     sls_sales,
+    sls_quantity,
+    sls_price
+FROM silver.crm_sales_details
+WHERE sls_sales != sls_quantity * sls_price
+    ON sls_sales IS NULL
+    ON sls_quantity IS NULL
+    ON sls_price IS NULL
+    ON sls_sales <= 0
+    ON sls_qunatity <= 0
+    ON sls_price <= 0
+ORDER BY sls_sales, sls_quantity, sls_price;
 
+-- ====================================================
+-- Checing 'silver.erp_custaz12'
+-- ====================================================
+-- Identify Out-of-Range Dates
+-- Expectation: Birthdates between 1924-01-01 and Today
+SELECT DISTINCT 
+    bdate
+FROM silver.erp_cust_az12
+WHERE bdate < '1924-01-01'
+    OR bdate > GETDATE();
 
+-- Data Standardized & Consistency
+SELECT DISTINCT
+    gen
+FROM silver.erp_loc_a101;
 
+-- ===========================================
+-- Checking 'silver.erp_loc_a101'
+-- ===========================================
+-- Data Standardization & Consistency
+SELECT DISTINCT
+    cntry
+FROM silver.erp_loc_a101
+ORDER BY cntry;
 
+-- ==========================================
+-- checking 'silver.erp_px_cat_g1v2'
+-- ==========================================
+-- Check for Unwanted Spaces
+-- Expectations: No Results
+SELECT 
+    *
+FROM silver.erp_px_cat_glv2
+WHERE cat != TRIM(cat)
+    OR subcat != TRIM(subcat)
+    OR maintenance != TRIM(maintenance);
 
-
-
-
-
-
-
-
-
-
-
+-- Data Standartization & Consistency
+SELECT DISTINCT 
+    maintenanace
+FROM silver.erp_px_cat_g1v2;
