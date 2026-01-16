@@ -41,4 +41,4 @@ This project is licensed under the (MIT License). You are free to use, modify, a
 
 ## About me 
 
-Hi there! I'm **Jaime Rendon** a student at Sam Houston State University. I'm Studying Computer Science and I did this project to show me skills as I continue to grow professionaly. I hope this project was enjoyable and engaging.
+Hi there! I'm **Jaime Rendon** a student at Sam Houston State University. I'm Studying Computer Science and I did this project to show my skills as I continue to grow professionaly. I hope this project was enjoyable and engaging.
