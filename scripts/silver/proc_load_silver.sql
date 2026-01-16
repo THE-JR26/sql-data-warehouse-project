@@ -210,11 +210,11 @@ BEGIN
 		TRUNCATE TABLE silver.erp_px_cat_g1v2
 		PRINT '>> Inserting Data Into: silver.erp_px_cat_g1v2';
 		INSERT INTO silver.erp_px_cat_g1v2
-		(id, car, subcat, maintenance)
+		(id, cat, subcat, maintenance)
 
 		SELECT 
 		id,
-		car AS cat, -- Mistake means cat
+		cat,
 		subcat,
 		maintenance
 		FROM bronze.erp_px_cat_g1v2
