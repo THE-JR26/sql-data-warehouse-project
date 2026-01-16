@@ -1,1 +1,2 @@
-1. gold.dim_customer 
+1. gold.dim_customer
+2.  * Purpose: Store customer details enriched with demographics and geographic data
