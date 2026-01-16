@@ -1,5 +1,5 @@
-**Overview**
-The Gold Layer is the business lever date representation structured to support analytical and reporting use cases it consists of *dimension tables* and *fact tables* for specific business metrics
+***Overview***
+The Gold Layer is the business lever date representation structured to support analytical and reporting use cases it consists of **dimension tables** and **fact tables** for specific business metrics
 
 1. gold.dim_customer -- Look at the customer in the other folders
    * Purpose: Store customer details enriched with demographics and geographic data.
