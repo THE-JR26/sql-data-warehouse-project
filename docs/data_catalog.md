@@ -1,7 +1,7 @@
 1. gold.dim_customer
    * Purpose: Store customer details enriched with demographics and geographic data.
    * Columns:
-     | Column Name | Data Type | Description |
+| Column Name | Data Type | Description |
       | ----------- | --------- | ----------- |
       | customer_key | INT | Surrogate key iniqualy identifying each customer record in the dimention table. |
       | customer_id | INT | Unique numerical identifier assigned to each customer. |
