@@ -2,8 +2,8 @@
    * Purpose: Store customer details enriched with demographics and geographic data.
    * Columns:
     | Column Name | Data Type | Description |
-| ----------- | --------- | ----------- |
-| customer_key | INT | Surrogate key iniqualy identifying each customer record in the dimention table. |
+    | ----------- | --------- | ----------- |
+    | customer_key | INT | Surrogate key iniqualy identifying each customer record in the dimention table. |
 | customer_id | INT | Unique numerical identifier assigned to each customer. |
 | customer_number| NVARCHAR(50) | Alphanumeric identifier representing the customer, used for tracking and references. |
 | first_name |  NVARCHAR(50) | The customer's first name, as recorded in the system. |
