@@ -19,13 +19,14 @@
    *  Columns:
       | Column Name | Data Type | Description |
       | ----------- | --------- | ----------- |
-      | customer_key | INT | Surrogate key iniqualy identifying each customer record in the dimention table. |
-      | customer_id | INT | Unique numerical identifier assigned to each customer. |
-      | customer_number| NVARCHAR(50) | Alphanumeric identifier representing the customer, used for tracking and references. |
-      | first_name |  NVARCHAR(50) | The customer's first name, as recorded in the system. |
-      | last_name | NVARCHAR(50) | The customer's last name or family name. |
-      | country | NVARCHAR(50) | The country of residence for the customer (e.g., 'Australia'). |
-      | marital_status | NVARCHAR(50) | The marital status of the customer (e.g., Married', 'Single'). |
-      | gender | NVARCHAR(50) | The gender of the customer (e.g., 'Male', 'Female', 'n/a'). |
-      | birthdate | DATE | The date of birth of the customer, formatted as YYYY-MM-DD (e.g., 1971-10-06). |
-      | create_date | DATE | The date and time when the customer record was created in the system. |
+      | product_key | INT | Surrogate key iniqualy identifying each product record in the product dimension table. |
+      | product_id | INT | A unique identifier assigned to the product for internal traking and referencing. |
+      | prduct_number |  NVARCHAR(50) | A structured alphanumeric code representing the product often used for categorization in invertory. |
+      | prduct_name |  NVARCHAR(50) | Descriptive name of the product, including key details such as type, color, and size. |
+      | category_id| NVARCHAR(50) | A unique identifier for the product's category, linking to its high-level classification. |
+      | category | NVARCHAR(50) | The broader classification of the product (e.g., Bikes, Components) to group related items. |
+      | subcategory | NVARCHAR(50) | A more detailed classification of the product within the category, such as product type. |
+      | maintenance_requiered | NVARCHAR(50) | Indicates whether the product requires maintenance (e.g., 'Yes', 'No'). |
+      | cost | NVARCHAR(50) | The cost or base price of the product measured in monetary units. |
+      | product_line | DATE | The specific product line or series to which the product belongs (e.g., Road, Mountain). |
+      | start_date | DATE | The date when the product became available for sale or use, stored in. |
