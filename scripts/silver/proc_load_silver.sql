@@ -55,7 +55,6 @@ BEGIN
 				WHEN UPPER(TRIM(cst_material_status)) = 'M' THEN 'Married'
 				ELSE 'n/a'
 			END AS cst_material_status, -- Normalize maritial status value to readable format
-			-- cst_gndr, delete because you made the case satement
 			CASE 
 				WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
 				WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
