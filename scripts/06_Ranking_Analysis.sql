@@ -1,5 +1,4 @@
 -- Which 5 products generate the highest revenue?
-
 SELECT TOP 5
 p.product_name,
 SUM(f.sales_amount) total_revenue
@@ -10,7 +9,6 @@ GROUP BY p.product_name
 ORDER BY total_revenue DESC
 
 -- What are the 5 worst-performing products in terms of sales?
-
 SELECT TOP 5
 p.product_name,
 SUM(f.sales_amount) total_revenue
@@ -21,7 +19,6 @@ GROUP BY p.product_name
 ORDER BY total_revenue 
 
 -- Find the top 10 customers who have generated the highest revenue
-
 SELECT TOP 10
 c.customer_key,
 c.first_name,
@@ -37,7 +34,6 @@ c.last_name
 ORDER BY total_revenue DESC
 
 -- The 3 cutomers with the  fewest orders placed
-
 SELECT TOP 3
 c.customer_key,
 c.first_name,
