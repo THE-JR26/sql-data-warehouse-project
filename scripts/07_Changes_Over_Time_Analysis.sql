@@ -1,3 +1,5 @@
+-- Analyze how a measure evolves over time.
+-- Helps track trends and identify seasonality in your data.
 SELECT 
 YEAR(order_date) as order_year,
 MONTH(order_date) as order_year,
@@ -29,3 +31,4 @@ WHERE order_date IS NOT NULL
 GROUP BY FORMAT(order_date, 'yyyy-MMM')
 
 ORDER BY FORMAT(order_date, 'yyyy-MMM')
+
